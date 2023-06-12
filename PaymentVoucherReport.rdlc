@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header__Payment_Voucher_Header___Bank_Name_">
+          <DataField>Payment_Voucher_Header__Payment_Voucher_Header___Bank_Name_</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header__Payment_Voucher_Header___Pay_Mode_">
+          <DataField>Payment_Voucher_Header__Payment_Voucher_Header___Pay_Mode_</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header__Payment_Voucher_Header___Cheque_No__">
+          <DataField>Payment_Voucher_Header__Payment_Voucher_Header___Cheque_No__</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header__Payment_Voucher_Header___Cheque_Date_">
+          <DataField>Payment_Voucher_Header__Payment_Voucher_Header___Cheque_Date_</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header__Payment_Voucher_Header___Bank_Code_">
+          <DataField>Payment_Voucher_Header__Payment_Voucher_Header___Bank_Code_</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header__PV_No__">
+          <DataField>Payment_Voucher_Header__PV_No__</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header__Payment_Voucher_Header___PV_Payee_">
+          <DataField>Payment_Voucher_Header__Payment_Voucher_Header___PV_Payee_</DataField>
+        </Field>
+        <Field Name="Bank_NameCaption">
+          <DataField>Bank_NameCaption</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header__Payment_Voucher_Header___Pay_Mode_Caption">
+          <DataField>Payment_Voucher_Header__Payment_Voucher_Header___Pay_Mode_Caption</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header__Payment_Voucher_Header___Cheque_No__Caption">
+          <DataField>Payment_Voucher_Header__Payment_Voucher_Header___Cheque_No__Caption</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header__Payment_Voucher_Header___Cheque_Date_Caption">
+          <DataField>Payment_Voucher_Header__Payment_Voucher_Header___Cheque_Date_Caption</DataField>
+        </Field>
+        <Field Name="Paying_BankCaption">
+          <DataField>Paying_BankCaption</DataField>
+        </Field>
+        <Field Name="ALL_AFRICA_CONFERENCE_OF_CHURCHESCaption">
+          <DataField>ALL_AFRICA_CONFERENCE_OF_CHURCHESCaption</DataField>
+        </Field>
+        <Field Name="PAYMENT_VOUCHERCaption">
+          <DataField>PAYMENT_VOUCHERCaption</DataField>
+        </Field>
+        <Field Name="Posting_DateCaption">
+          <DataField>Posting_DateCaption</DataField>
+        </Field>
+        <Field Name="DescriptionCaption">
+          <DataField>DescriptionCaption</DataField>
+        </Field>
+        <Field Name="Currency_CodeCaption">
+          <DataField>Currency_CodeCaption</DataField>
+        </Field>
+        <Field Name="AmountCaption">
+          <DataField>AmountCaption</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Line__Account_Type_Caption">
+          <DataField>Payment_Voucher_Line__Account_Type_Caption</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Line__Global_Dimension_2_Caption">
+          <DataField>Payment_Voucher_Line__Global_Dimension_2_Caption</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Line__Global_Dimension_1_Caption">
+          <DataField>Payment_Voucher_Line__Global_Dimension_1_Caption</DataField>
+        </Field>
+        <Field Name="V00800_Nairobi__WestlandsCaption">
+          <DataField>V00800_Nairobi__WestlandsCaption</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Line__Account_No__Caption">
+          <DataField>Payment_Voucher_Line__Account_No__Caption</DataField>
+        </Field>
+        <Field Name="PayeeCaption">
+          <DataField>PayeeCaption</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header__Date">
+          <DataField>Payment_Voucher_Header__Date</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Line_Description">
+          <DataField>Payment_Voucher_Line_Description</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Line__Currency_Code_">
+          <DataField>Payment_Voucher_Line__Currency_Code_</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Line_Amount">
+          <DataField>Payment_Voucher_Line_Amount</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Line_AmountFormat">
+          <DataField>Payment_Voucher_Line_AmountFormat</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Line__Account_Type_">
+          <DataField>Payment_Voucher_Line__Account_Type_</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Line__Global_Dimension_1_">
+          <DataField>Payment_Voucher_Line__Global_Dimension_1_</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Line__Global_Dimension_2_">
+          <DataField>Payment_Voucher_Line__Global_Dimension_2_</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Line__Account_No__">
+          <DataField>Payment_Voucher_Line__Account_No__</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Line__Account_Type__Control1000000021">
+          <DataField>Payment_Voucher_Line__Account_Type__Control1000000021</DataField>
+        </Field>
+        <Field Name="AccountName">
+          <DataField>AccountName</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header___Amount_Calculated_">
+          <DataField>Payment_Voucher_Header___Amount_Calculated_</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header___Amount_Calculated_Format">
+          <DataField>Payment_Voucher_Header___Amount_Calculated_Format</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header___Prepared_Date_">
+          <DataField>Payment_Voucher_Header___Prepared_Date_</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header___Reviewed_Date_">
+          <DataField>Payment_Voucher_Header___Reviewed_Date_</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header___First_Signatory_Date_">
+          <DataField>Payment_Voucher_Header___First_Signatory_Date_</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header___Second_Signatory_Date_">
+          <DataField>Payment_Voucher_Header___Second_Signatory_Date_</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header___Prepared_By_">
+          <DataField>Payment_Voucher_Header___Prepared_By_</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header___Reviewed_By_">
+          <DataField>Payment_Voucher_Header___Reviewed_By_</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header___First_Signatory_">
+          <DataField>Payment_Voucher_Header___First_Signatory_</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header___Second_Signatory_">
+          <DataField>Payment_Voucher_Header___Second_Signatory_</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header___Cheque_Cash_Recieved_Date_">
+          <DataField>Payment_Voucher_Header___Cheque_Cash_Recieved_Date_</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header___Cheque_Cash_Recieved_By_">
+          <DataField>Payment_Voucher_Header___Cheque_Cash_Recieved_By_</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header___ID_No__Passport_No__">
+          <DataField>Payment_Voucher_Header___ID_No__Passport_No__</DataField>
+        </Field>
+        <Field Name="Total_AmountCaption">
+          <DataField>Total_AmountCaption</DataField>
+        </Field>
+        <Field Name="Signature____________________________________Caption">
+          <DataField>Signature____________________________________Caption</DataField>
+        </Field>
+        <Field Name="Signature____________________________________Caption_Control1000000028">
+          <DataField>Signature____________________________________Caption_Control1000000028</DataField>
+        </Field>
+        <Field Name="Signature____________________________________Caption_Control1000000029">
+          <DataField>Signature____________________________________Caption_Control1000000029</DataField>
+        </Field>
+        <Field Name="Signature____________________________________Caption_Control1000000032">
+          <DataField>Signature____________________________________Caption_Control1000000032</DataField>
+        </Field>
+        <Field Name="FOR_OFFICIAL_USE_ONLYCaption">
+          <DataField>FOR_OFFICIAL_USE_ONLYCaption</DataField>
+        </Field>
+        <Field Name="DateCaption">
+          <DataField>DateCaption</DataField>
+        </Field>
+        <Field Name="DateCaption_Control1000000042">
+          <DataField>DateCaption_Control1000000042</DataField>
+        </Field>
+        <Field Name="DateCaption_Control1000000043">
+          <DataField>DateCaption_Control1000000043</DataField>
+        </Field>
+        <Field Name="DateCaption_Control1000000044">
+          <DataField>DateCaption_Control1000000044</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header___Second_Signatory_Caption">
+          <DataField>Payment_Voucher_Header___Second_Signatory_Caption</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header___Reviewed_By_Caption">
+          <DataField>Payment_Voucher_Header___Reviewed_By_Caption</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header___First_Signatory_Caption">
+          <DataField>Payment_Voucher_Header___First_Signatory_Caption</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header___Prepared_By_Caption">
+          <DataField>Payment_Voucher_Header___Prepared_By_Caption</DataField>
+        </Field>
+        <Field Name="Signature____________________________________Caption_Control1000000033">
+          <DataField>Signature____________________________________Caption_Control1000000033</DataField>
+        </Field>
+        <Field Name="ACKNOWLEDGEMENT_OF_RECEIPTCaption">
+          <DataField>ACKNOWLEDGEMENT_OF_RECEIPTCaption</DataField>
+        </Field>
+        <Field Name="DateCaption_Control1000000045">
+          <DataField>DateCaption_Control1000000045</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header___Cheque_Cash_Recieved_By_Caption">
+          <DataField>Payment_Voucher_Header___Cheque_Cash_Recieved_By_Caption</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Header___ID_No__Passport_No__Caption">
+          <DataField>Payment_Voucher_Header___ID_No__Passport_No__Caption</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Line_PV_No_">
+          <DataField>Payment_Voucher_Line_PV_No_</DataField>
+        </Field>
+        <Field Name="Payment_Voucher_Line_Line_No_">
+          <DataField>Payment_Voucher_Line_Line_No_</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
